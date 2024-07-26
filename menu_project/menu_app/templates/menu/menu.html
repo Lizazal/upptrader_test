@@ -1,0 +1,26 @@
+<!-- шаблон для отображения меню -->
+<ul>
+    {% for item, children in menu_tree %}
+        <li>
+            <a href="{{ item.get_url }}" {% if item == active_item %}class="active"{% endif %}>{{ item.name }}</a>
+            {% if children %}
+                <ul>
+                    {% for child, subchildren in children %}
+                        <li>
+                            <a href="{{ child.get_url }}" {% if child == active_item %}class="active"{% endif %}>{{ child.name }}</a>
+                            {% if subchildren %}
+                                <ul>
+                                    {% for subchild, _ in subchildren %}
+                                        <li>
+                                            <a href="{{ subchild.get_url }}" {% if subchild == active_item %}class="active"{% endif %}>{{ subchild.name }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,17 @@
+<!-- подгрузка тегов и пример отображения меню по названию -->
+{% load menu_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Example</title>
+</head>
+<body>
+    <h1>Menu Example</h1>
+    {% draw_menu 'main_menu' %}
+
+    <h1>Side Menu Example</h1>
+    {% draw_menu 'sidebar_menu' %}
+</body>
+</html>
