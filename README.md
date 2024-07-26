@@ -25,34 +25,51 @@
     cd upptrader_test
     ```
 2. **Создайте виртуальное окружение:**
+
 На Windows:
+
     ```
     python -m venv venv
     venv\Scripts\activate
     ```
+
 На MacOS/Linux:
+
     ```
     python3 -m venv venv
     source venv/bin/activate
     ```
+
 3. **Установите зависимости:**
+
     ```
     pip install -r requirements.txt
     ```
+
 4. **Настройте переменные окружения:**
+
 Создайте файл .env, в котором хранится SECRET_KEY для Django в формате SECRET_KEY='your_secret_key'
+
 5. **Примените миграции:**
+
     ```
     python manage.py migrate
     ```
+
 6. **Создайте суперпользователя:**
+
     ```
     python manage.py createsuperuser
     ```
+
 7. **Запустите сервер:**
+
     ```
     python manage.py runserver
     ```
+
 8. **Используйте:**
+
 После запуска сервера откройте браузер и перейдите по адресу http://127.0.0.1:8000/
+
 Админка доступна по адресу http://127.0.0.1:8000/admin/
